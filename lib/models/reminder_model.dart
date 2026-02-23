@@ -31,12 +31,12 @@ class ReminderModel {
   // Создание из JSON
   factory ReminderModel.fromJson(Map<String, dynamic> json) {
     return ReminderModel(
-      id: json['id'],
-      taskId: json['taskId'],
-      scheduledTime: DateTime.parse(json['scheduledTime']),
-      isSent: json['isSent'] ?? false,
-      title: json['title'],
-      body: json['body'],
+      id: json['id'].toString(),
+      taskId: json['taskId'].toString(),
+      scheduledTime: DateTime.parse(json['scheduledTime'].toString()),
+      isSent: (json['isSent'] as bool?) ?? false,
+      title: json['title'].toString(),
+      body: json['body'].toString(),
     );
   }
 }

@@ -37,14 +37,14 @@ class TaskModel {
   // Создание из JSON
   factory TaskModel.fromJson(Map<String, dynamic> json) {
     return TaskModel(
-      id: json['id'],
-      title: json['title'],
-      description: json['description'],
-      dateTime: DateTime.parse(json['dateTime']),
-      category: json['category'],
-      isCompleted: json['isCompleted'] ?? false,
-      hasReminder: json['hasReminder'] ?? true,
-      reminderMinutesBefore: json['reminderMinutesBefore'] ?? 15,
+      id: json['id'].toString(),
+      title: json['title'].toString(),
+      description: json['description'] != null ? json['description'].toString() : null,
+      dateTime: DateTime.parse(json['dateTime'].toString()),
+      category: json['category'].toString(),
+      isCompleted: (json['isCompleted'] as bool?) ?? false,
+      hasReminder: (json['hasReminder'] as bool?) ?? true,
+      reminderMinutesBefore: int.tryParse(json['reminderMinutesBefore'].toString()) ?? 15,
     );
   }
 }

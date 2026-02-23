@@ -34,13 +34,13 @@ class NoteModel {
   // Создание из JSON
   factory NoteModel.fromJson(Map<String, dynamic> json) {
     return NoteModel(
-      id: json['id'],
-      title: json['title'],
-      content: json['content'],
-      createdAt: DateTime.parse(json['createdAt']),
-      updatedAt: json['updatedAt'] != null ? DateTime.parse(json['updatedAt']) : null,
-      category: json['category'],
-      isPinned: json['isPinned'] ?? false,
+      id: json['id'].toString(),
+      title: json['title'].toString(),
+      content: json['content'].toString(),
+      createdAt: DateTime.parse(json['createdAt'].toString()),
+      updatedAt: json['updatedAt'] != null ? DateTime.parse(json['updatedAt'].toString()) : null,
+      category: json['category'].toString(),
+      isPinned: (json['isPinned'] as bool?) ?? false,
     );
   }
 }

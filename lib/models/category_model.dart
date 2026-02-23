@@ -27,10 +27,10 @@ class CategoryModel {
   // Создание из JSON
   factory CategoryModel.fromJson(Map<String, dynamic> json) {
     return CategoryModel(
-      id: json['id'],
-      name: json['name'],
-      color: Color(json['color']),
-      icon: json['icon'],
+      id: json['id'].toString(),
+      name: json['name'].toString(),
+      color: Color(int.parse(json['color'].toString())),
+      icon: json['icon'].toString(),
     );
   }
 }
