@@ -1,0 +1,51 @@
+name: notes_schedule
+description: "Умный планировщик с напоминаниями - NotesShedule приложение для управления расписанием и задачами с интеллектуальной системой напоминаний"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # UI компоненты
+  cupertino_icons: ^1.0.2
+  
+  # Работа с датами и временем
+  intl: ^0.19.0
+  
+  # База данных и хранилище
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  
+  # Уведомления и напоминания
+  flutter_local_notifications: ^15.0.0
+  
+  # Состояние приложения (опционально)
+  provider: ^6.0.0
+  
+  # Логирование
+  logger: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
+  
+  fonts:
+    - family: CustomFont
+      fonts:
+        - asset: assets/fonts/CustomFont-Regular.ttf
+        - asset: assets/fonts/CustomFont-Bold.ttf
+          weight: 700

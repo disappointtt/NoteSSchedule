@@ -1,0 +1,62 @@
+# Файл для анализа кода Flutter приложения
+
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    - camel_case_types
+    - camel_case_extensions
+    - library_names
+    - library_prefixes
+    - non_constant_identifier_names
+    - prefer_adjacent_string_concatenation
+    - prefer_const_constructors
+    - prefer_const_constructors_in_immutables
+    - prefer_final_fields
+    - prefer_final_in_for_each
+    - prefer_final_locals
+    - prefer_for_elements_to_map_fromIterable
+    - prefer_foreach
+    - prefer_generic_function_type_aliases
+    - prefer_if_null_to_conditional
+    - prefer_if_elements_to_conditional_expressions
+    - prefer_relative_import
+    - prefer_single_quotes
+    - sized_box_for_whitespace
+    - sized_box_shrink
+    - sort_child_properties_last
+    - type_init_formals
+    - unawaited_futures
+    - unnecessary_await_in_return
+    - unnecessary_constructor_name
+    - unnecessary_getters_setters
+    - unnecessary_lambdas
+    - unnecessary_new
+    - unnecessary_overrides
+    - unnecessary_statements
+    - unnecessary_string_escapes
+    - unnecessary_string_interpolations
+    - unnecessary_this
+    - unnecessary_to_list_in_spreads
+    - use_build_context_synchronously
+    - use_full_hex_values_for_flutter_colors
+    - use_key_in_widget_constructors
+    - use_late_for_private_fields_and_variables
+    - use_raw_strings
+    - use_setters_to_change_properties
+    - use_string_buffers
+    - use_test_throws_matchers
+    - use_to_close_resource
+    - void_checks
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+  errors:
+    missing_required_param: error
+    missing_return: error
+    todo: ignore
+  language:
+    strict-casts: true
+    strict-raw-types: true
